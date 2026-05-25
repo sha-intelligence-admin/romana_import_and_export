@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pad: clamp(20px, 5vw, 80px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter Tight', -apple-system, sans-serif;
+  color: #0a0a0a;
+  background: #faf6ee;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Paper grain */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.px-pad { padding-left: var(--pad); padding-right: var(--pad); }
+.py-pad-nav { padding-top: 18px; padding-bottom: 18px; }
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.anim-fadeup { animation: fadeUp 1s 0.2s both ease-out; }
+.anim-fadeup-late { animation: fadeUp 1s 0.55s both ease-out; }
+
+/* Hero underline */
+.hero-underline {
+  position: relative;
+  white-space: nowrap;
+}
+.hero-underline::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0.05em;
+  height: 0.08em;
+  background: #b8860b;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Hero radial */
+.hero-radial::before {
+  content: '';
+  position: absolute;
+  top: 50%; right: 0;
+  width: 50%; height: 130%;
+  background: radial-gradient(circle at 30% 50%, rgba(184, 134, 11, 0.08), transparent 60%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Categories radial */
+.cat-radial::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(184, 134, 11, 0.12), transparent 50%);
+  pointer-events: none;
+}
+
+/* Contact radial */
+.contact-radial::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(139, 58, 31, 0.15), transparent 50%);
+  pointer-events: none;
+}
+
+/* Logistics radial */
+.logistics-radial::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 280px; height: 100%;
+  background: radial-gradient(circle at 100% 50%, rgba(232, 212, 160, 0.12), transparent 60%);
+  pointer-events: none;
+}
+
+/* Section label line */
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #8c6608;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-label::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: #b8860b;
+}
+.section-label.light {
+  color: #e8d4a0;
+}
+.section-label.light::before {
+  background: #e8d4a0;
+}
+
+/* Logistics tag */
+.logistics-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #e8d4a0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logistics-tag::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: #e8d4a0;
+}
+
+/* Process step divider */
+.process-step-divider {
+  position: relative;
+}
+.process-step-divider::before {
+  content: '';
+  position: absolute;
+  top: 18px; right: -16px;
+  width: 32px; height: 1px;
+  background: #d8cdb5;
+}
+@media (max-width: 1024px) {
+  .process-step-divider::before { display: none; }
+}
+
+/* Category body */
+.cat-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cat-body.open {
+  max-height: 5000px;
+}
+
+/* Field styling */
+.field {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 16px 0;
+  color: #faf6ee;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14.5px;
+  margin-bottom: 8px;
+  transition: border-color 0.2s ease;
+}
+.field:focus {
+  outline: none;
+  border-bottom-color: #e8d4a0;
+}
+.field::placeholder { color: rgba(250, 246, 238, 0.4); }
+textarea.field {
+  resize: vertical;
+  min-height: 80px;
+}
