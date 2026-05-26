@@ -69,25 +69,21 @@ export default function Categories() {
                 }`}
               >
                 <div
-                  className="grid items-center cursor-pointer gap-5 sm:gap-8 px-4 sm:px-6 py-6 sm:py-8"
-                  style={{
-                    gridTemplateColumns:
-                      'minmax(0, 60px) minmax(0, 1fr) auto auto',
-                  }}
+                  className="grid items-center cursor-pointer gap-5 sm:gap-6 lg:gap-8 px-4 sm:px-5 lg:px-6 py-6 sm:py-7 lg:py-8 grid-cols-[1fr_auto] sm:grid-cols-[48px_1fr_auto] lg:grid-cols-[60px_1fr_auto_auto]"
                   onClick={() => toggle(cat.num)}
                 >
-                  <div className="font-mono text-[12px] text-gold-soft tracking-[0.15em] max-sm:hidden">
+                  <div className="font-mono text-[12px] text-gold-soft tracking-[0.15em] hidden sm:block">
                     / {cat.num}
                   </div>
-                  <div className="font-serif font-normal leading-[1.1] tracking-[-0.02em] text-paper text-[22px] sm:text-[26px] lg:text-[32px]">
+                  <div className="font-serif font-normal leading-[1.1] tracking-[-0.02em] text-paper text-[20px] sm:text-[24px] lg:text-[32px] min-w-0">
                     {cat.nameStart}
                     <em className="italic text-gold-soft font-light">{cat.nameEm}</em>
                   </div>
-                  <div className="font-mono text-[10.5px] text-paper/50 tracking-[0.15em] uppercase whitespace-nowrap max-lg:hidden">
+                  <div className="font-mono text-[10.5px] text-paper/50 tracking-[0.15em] uppercase whitespace-nowrap hidden lg:block">
                     {cat.items.length} Products
                   </div>
                   <div
-                    className={`w-9 h-9 max-sm:w-8 max-sm:h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                    className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 ${
                       isOpen
                         ? 'bg-gold text-ink border-gold rotate-45'
                         : 'border-white/15 text-gold-soft'
