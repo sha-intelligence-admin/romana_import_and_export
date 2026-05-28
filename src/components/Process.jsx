@@ -8,7 +8,7 @@ export default function Process() {
     >
       <div className="max-w-page mx-auto px-pad">
         <div className="reveal section-label mb-6">How We Work</div>
-        <h2 className="reveal font-serif font-normal leading-[1.02] tracking-[-0.025em] max-w-[950px] mb-6 text-[clamp(34px,5.5vw,64px)]">
+        <h2 className="reveal font-serif font-normal leading-[1.06] tracking-[-0.02em] max-w-[950px] mb-6 text-[clamp(34px,5.5vw,64px)]">
           Four stages.
           <br />
           <em className="italic font-light text-terracotta-deep">From the farm to your warehouse.</em>
@@ -24,7 +24,7 @@ export default function Process() {
               <div className="font-serif text-[48px] text-terracotta-deep leading-none tracking-[-0.02em] mb-6 font-normal">
                 {s.num}
               </div>
-              <h4 className="font-serif text-[22px] font-medium leading-[1.15] mb-3 text-ink">
+              <h4 className="font-serif text-[22px] font-medium leading-[1.25] mb-3 text-ink">
                 {s.title}
               </h4>
               <p className="text-[14.5px] leading-[1.6] text-ink-mute font-light">{s.text}</p>

@@ -27,18 +27,18 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-wrap">
         {/* Brand block */}
-        <div className="footer-brand-block">
-          <div className="footer-brand">
+        {/* <div className="footer-brand-block"> */}
+          {/* <div className="footer-brand">
             <span className="footer-mark" />
-            Romana <em>Import &amp; Export</em>
-          </div>
-          <p className="footer-tag">
+            Romana <em>Import &amp; Export</em> Limited
+          </div> */}
+          {/* <p className="footer-tag">
             A Nigerian commodity trading house connecting African resources to verified buyers
             across Europe, Asia, and the Americas. Built on trust, discipline, and the soil of
             Nigeria.
           </p>
-          <div className="footer-locale">Headquartered in Abuja, Nigeria</div>
-        </div>
+          <div className="footer-locale">Headquartered in Abuja, Nigeria</div> */}
+        {/* </div> */}
 
         {/* 4 columns */}
         <div className="footer-cols">
@@ -57,7 +57,7 @@ export default function Footer() {
             <div className="footer-col-label">Contact</div>
             <ul>
               <li>
-                <a href="mailto:info@romanaie.co">info@romanaie.co</a>
+                <a href="mailto:info@romanaie.co">info@romanaie.com</a>
               </li>
               <li>
                 <a href="tel:+2348036802214">+234 803 680 2214</a>

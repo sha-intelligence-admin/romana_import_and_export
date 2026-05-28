@@ -7,7 +7,7 @@ export default function Promise() {
         <div className="grid gap-16 lg:gap-[100px] grid-cols-1 lg:grid-cols-2 items-start">
           <div className="lg:sticky lg:top-[120px]">
             <div className="reveal section-label mb-6">The Promise</div>
-            <h2 className="reveal font-serif font-normal leading-[1.02] tracking-[-0.025em] max-w-[950px] mb-6 text-[clamp(34px,5.5vw,64px)]">
+            <h2 className="reveal font-serif font-normal leading-[1.06] tracking-[-0.02em] max-w-[950px] mb-6 text-[clamp(34px,5.5vw,64px)]">
               What it means
               <br />
               to trade with <em className="italic font-light text-terracotta-deep">Romana.</em>
@@ -25,11 +25,11 @@ export default function Promise() {
                   i === promises.length - 1 ? 'border-b border-rule' : ''
                 }`}
               >
-                <div className="font-mono text-[12px] tracking-[0.1em] text-gold-deep pt-1">
+                <div className="font-mono text-[12px] tracking-[0.1em] text-terracotta-deep pt-1">
                   / {p.num}
                 </div>
                 <div>
-                  <h3 className="font-serif text-[26px] font-normal leading-[1.15] tracking-[-0.02em] mb-2.5 text-ink">
+                  <h3 className="font-serif text-[26px] font-normal leading-[1.2] tracking-[-0.01em] mb-2.5 text-ink">
                     {p.title}
                   </h3>
                   <p className="text-[15.5px] leading-[1.6] text-ink-mute font-light">{p.text}</p>

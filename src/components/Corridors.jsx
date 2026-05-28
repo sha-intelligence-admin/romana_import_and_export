@@ -8,18 +8,18 @@ function CorridorBlock({ direction, headline, items }) {
       <div className="flex justify-between items-center mb-7 pb-5 border-b border-rule">
         <span
           className={`font-mono text-[10.5px] tracking-[0.22em] uppercase ${
-            isOut ? 'text-gold-deep' : 'text-terracotta-deep'
+            isOut ? 'text-terracotta-deep' : 'text-terracotta-deep'
           }`}
         >
           {isOut ? 'Exporting From Nigeria' : 'Importing Into Nigeria'}
         </span>
         {isOut ? (
-          <ArrowRight size={26} strokeWidth={1.2} className="text-gold" />
+          <ArrowRight size={26} strokeWidth={1.2} className="text-terracotta" />
         ) : (
-          <ArrowLeft size={26} strokeWidth={1.2} className="text-gold" />
+          <ArrowLeft size={26} strokeWidth={1.2} className="text-terracotta" />
         )}
       </div>
-      <h3 className="font-serif text-[26px] font-normal leading-[1.15] tracking-[-0.02em] text-ink mb-8">
+      <h3 className="font-serif text-[26px] font-normal leading-[1.2] tracking-[-0.01em] text-ink mb-8">
         {headline}
       </h3>
       <div className="flex flex-col">
@@ -49,7 +49,7 @@ export default function Corridors() {
     >
       <div className="max-w-page mx-auto px-pad">
         <div className="reveal section-label mb-6">Trade Corridors</div>
-        <h2 className="reveal font-serif font-normal leading-[1.02] tracking-[-0.025em] max-w-[950px] mb-6 text-[clamp(34px,5.5vw,64px)]">
+        <h2 className="reveal font-serif font-normal leading-[1.06] tracking-[-0.02em] max-w-[950px] mb-6 text-[clamp(34px,5.5vw,64px)]">
           Where Nigeria <em className="italic font-light text-terracotta-deep">sends out</em>.
           <br />
           Where Nigeria <em className="italic font-light text-terracotta-deep">brings in</em>.

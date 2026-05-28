@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140" fill="none">
+  <!-- Outer ring -->
+  <circle cx="70" cy="70" r="66" stroke="#0a0a0a" stroke-width="1.4" fill="none" opacity="0.85"/>
+  <circle cx="70" cy="70" r="58" stroke="#b8860b" stroke-width="0.7" fill="none" opacity="0.7"/>
+
+  <!-- Import arrow (gold, flowing right) -->
+  <line x1="20" y1="58" x2="108" y2="58" stroke="#b8860b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M104 50 L112 58 L104 66" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Export arrow (terracotta, flowing left) -->
+  <line x1="120" y1="82" x2="32" y2="82" stroke="#8b3a1f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M36 74 L28 82 L36 90" stroke="#8b3a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Centre marker dot -->
+  <circle cx="70" cy="70" r="2.5" fill="#0a0a0a"/>
+</svg>

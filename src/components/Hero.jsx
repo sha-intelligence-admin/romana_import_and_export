@@ -5,7 +5,9 @@ export default function Hero() {
     <section
       className="hero-radial relative max-w-page mx-auto flex flex-col justify-center px-pad pt-[120px] sm:pt-[140px] lg:pt-[180px] pb-16 sm:pb-20 lg:pb-[100px] lg:min-h-[92vh] z-[2]"
     >
-      <h1 className="anim-fadeup font-serif font-normal tracking-[-0.035em] max-w-[1100px] text-ink mb-6 text-[44px] xs:text-[clamp(48px,9vw,132px)] leading-[1] sm:leading-[0.92]">
+
+      <p>A subsidiary of Romana Group. EST 2020</p>
+      <h1 className="anim-fadeup font-serif font-normal tracking-[-0.02em] max-w-[1100px] text-ink mb-6 text-[44px] xs:text-[clamp(48px,9vw,132px)] leading-[1.02] sm:leading-[1.04]">
         Where <em className="italic font-light text-terracotta-deep">Africa</em>
         <br className="hidden sm:block" />
         trades with

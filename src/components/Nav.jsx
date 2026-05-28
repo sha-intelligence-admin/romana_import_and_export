@@ -25,17 +25,17 @@ export default function Nav() {
             Romana{' '}
             <em className="italic text-ink-mute font-normal ml-1 hidden sm:inline">
               Import &amp; Export
-            </em>
+            </em> Limited
           </span>
         </a>
         <div className="flex gap-3 sm:gap-9 items-center text-[13.5px] font-normal text-ink-soft">
-          <a href="#commodities" className="nav-link hidden sm:inline relative transition-colors hover:text-gold-deep">
+          <a href="#commodities" className="nav-link hidden sm:inline relative transition-colors hover:text-terracotta-deep">
             Portfolio
           </a>
-          <a href="#corridors" className="nav-link hidden sm:inline relative transition-colors hover:text-gold-deep">
+          <a href="#corridors" className="nav-link hidden sm:inline relative transition-colors hover:text-terracotta-deep">
             Trade Routes
           </a>
-          <a href="#process" className="nav-link hidden sm:inline relative transition-colors hover:text-gold-deep">
+          <a href="#process" className="nav-link hidden sm:inline relative transition-colors hover:text-terracotta-deep">
             How We Work
           </a>
           <a
